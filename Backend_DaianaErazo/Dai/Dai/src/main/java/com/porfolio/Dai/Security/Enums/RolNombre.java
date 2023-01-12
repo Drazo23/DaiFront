@@ -9,6 +9,6 @@ package com.porfolio.Dai.Security.Enums;
  * @author User
  */
 public enum RolNombre {
-    ROLE_aDMIN, ROLE_USER
+    ROLE_ADMIN, ROLE_USER 
     
 }
