@@ -39,10 +39,10 @@ import { interceptorProvider } from './service/interceptor-service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    NgCircleProgressModule.forRoot({}),
     HttpClientModule,
+    AppRoutingModule,
     FormsModule,
+    NgCircleProgressModule.forRoot({}),
 
   ],
   providers: [
