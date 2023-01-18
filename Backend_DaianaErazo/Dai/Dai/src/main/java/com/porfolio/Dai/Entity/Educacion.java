@@ -2,17 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.porfolio.Dai.Security.Entity;
+package com.porfolio.Dai.Entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-/**
- *
- * @author User
- */
+
+
+
 @Entity
 public class Educacion {
     @Id
@@ -20,8 +19,6 @@ public class Educacion {
     private int id;
     private String nombreE;
     private String descripcionE;
-    
-    //constructor
 
     public Educacion() {
     }
@@ -30,7 +27,6 @@ public class Educacion {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
     }
-    //Getter y setter
 
     public int getId() {
         return id;
@@ -57,7 +53,6 @@ public class Educacion {
     }
     
     
-    
-    
+     
     
 }

@@ -27,7 +27,7 @@ export class SExperienciaService{
         return this.httpCliente.put<any>(this.expURL + `update/${id}`, experiencia);
     }
     public delete(id: number): Observable<any>{
-        return this.httpCliente.delete<any>(this.expURL + `detail/${id}`);
+        return this.httpCliente.delete<any>(this.expURL + `delete/${id}`);
     }
 
 }
