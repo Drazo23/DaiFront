@@ -23,7 +23,7 @@ public class SExperiencia {
     @Autowired
     RExperiencia rExperiencia;
     
-    public List<Experiencia> lis(){
+    public List<Experiencia> list(){
         return rExperiencia.findAll();
     }
     public Optional<Experiencia> getOne(int id){
@@ -45,7 +45,4 @@ public class SExperiencia {
         return rExperiencia.existsByNombreE(NombreE); 
     }
 
-    public List<Experiencia> list() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }
