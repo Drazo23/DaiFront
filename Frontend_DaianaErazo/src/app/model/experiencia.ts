@@ -5,6 +5,6 @@ export class Experiencia{
 
     constructor(nombreE: string, descripcionE: string){
         this.nombreE = nombreE;
-        this.descripcionE = descripcionE
+        this.descripcionE = descripcionE;
     }
 }
