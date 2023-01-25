@@ -4,7 +4,7 @@ import { Proyectos } from 'src/app/model/proyectos';
 import { ProyectosService } from 'src/app/service/proyectos.service';
 
 @Component({
-    selector: 'app-proyectos',
+    selector: 'app-newproyectos',
     templateUrl: './newproyectos.component.html',
     styleUrls: ['./newproyectos.component.css']
 })
