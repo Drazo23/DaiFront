@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Skill } from '../model/skill';
 
 @Injectable({
-    providedIn: 'root'
+    providedIn: 'root' 
 })
 export class SkillService {
     URL = 'http://localhost:8080/skill/';

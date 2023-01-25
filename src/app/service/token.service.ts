@@ -5,7 +5,7 @@ const USERNAME_KEY = 'AuthUsername';
 const AUTHORITIES_KEY = 'AuthAuthorities';
 
 @Injectable({
-    providedIn: 'root'
+    providedIn: 'root' 
 })
 
 export class TokenService {
