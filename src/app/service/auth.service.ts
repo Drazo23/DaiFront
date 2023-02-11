@@ -1,23 +1,26 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { JwtDto } from '../model/jwt-dto';
 import { LoginUsuario } from '../model/login-usuario';
 import { Nuevousuario } from '../model/nuevo-usuario';
+import { APP_CONFIG, AppConfig } from '../app-config.module';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root',
 })
+
 export class AuthService {
-    authURL = 'https://daiback-production.up.railway.app/auth/'
+  constructor(
+    private httpCliente: HttpClient,
+    @Inject(APP_CONFIG) private config: AppConfig
+  ) {}
 
-    constructor(private httpCliente: HttpClient) { }
+  public nuevo(nuevoUsuario: Nuevousuario): Observable<any> {
+    return this.httpCliente.post<any>(this.config.apiEndpoint + '/auth/nuevo', nuevoUsuario);
+  }
 
-    public nuevo(nuevoUsuario: Nuevousuario): Observable<any>{
-        return this.httpCliente.post<any>(this.authURL + 'nuevo', nuevoUsuario);
-    }
-
-    public login(loginUsuario: LoginUsuario): Observable<JwtDto>{
-        return this.httpCliente.post<JwtDto>(this.authURL + 'login', loginUsuario)
-    }
+  public login(loginUsuario: LoginUsuario): Observable<JwtDto> {
+    return this.httpCliente.post<JwtDto>(this.config.apiEndpoint + '/auth/login', loginUsuario);
+  }
 }

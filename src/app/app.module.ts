@@ -30,7 +30,7 @@ import { EditproyectosComponent } from './components/proyectos/editproyectos.com
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
-
+import { AppConfigModule } from './app-config.module'
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,8 +64,9 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     FormsModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
+    AppConfigModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideStorage(() => getStorage())
+    provideStorage(() => getStorage()),
   ],
   providers: [
     interceptorProvider
