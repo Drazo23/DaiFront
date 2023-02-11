@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "porfolio-front"
+  },
+  "targets": {
+    "porfolio-front": {
+      "hosting": {
+        "ProInte_DaianaErazo": [
+          "porfolio-front"
+        ]
+      }
+    }
   }
 }

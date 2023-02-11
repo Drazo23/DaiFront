@@ -10,6 +10,6 @@ export const environment = {
     measurementId: 'G-6NNJC4XCBC',
   },
     production: true,
-    URL: 'https://daiback-production.up.railway.app'
+    apiEndpoint: 'https://daiback-production.up.railway.app'
   };
   
