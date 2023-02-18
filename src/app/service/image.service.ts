@@ -9,12 +9,11 @@ import { Storage, ref, uploadBytes, list, getDownloadURL } from '@angular/fire/s
 export class ImageService {
     url: string = "";
     constructor(private storage: Storage) {}
-   
-    public uploadImage($event: any, name: string){
+    public uploadImage($event: any, name: string) {
         const file = $event.target.files[0]
         const imgRef = ref(this.storage, `imagen/`+ name) 
-        uploadBytes(imgRef, file)
-        .then(response => {this.getImagenes()})
+        return uploadBytes(imgRef, file)
+        .then(response => getDownloadURL(imgRef))
         .catch(error => console.log(error))
     }
 
