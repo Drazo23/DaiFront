@@ -8,9 +8,9 @@ import { ProyectosService } from 'src/app/service/proyectos.service';
     templateUrl:'./editproyectos.component.html',
     styleUrls:['./editproyectos.component.css']
 })
-export class EditproyectosComponent implements OnInit{
-    proyectos: Proyectos = null;
 
+export class EditproyectosComponent implements OnInit{
+    proyecto: Proyectos = null;
     constructor(
         private proyectosS: ProyectosService,
         private activatedRouter : ActivatedRoute,
@@ -20,7 +20,7 @@ export class EditproyectosComponent implements OnInit{
         const id = this.activatedRouter.snapshot.params['id'];
         this.proyectosS.detail(id).subscribe(
             data =>{
-                this.proyectos = data;
+                this.proyecto = data;
             }, err =>{
                 alert("Error al modificar");
                 this.router.navigate(['']);
@@ -30,7 +30,7 @@ export class EditproyectosComponent implements OnInit{
     
     onUpdate(): void{
      const id = this.activatedRouter.snapshot.params['id'];
-     this.proyectosS.update(id, this.proyectos).subscribe(
+     this.proyectosS.update(id, this.proyecto).subscribe(
         data => {
            this.router.navigate(['']); 
         }, err => {

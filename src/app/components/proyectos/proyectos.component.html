@@ -13,6 +13,8 @@
                 <tr *ngFor="let Proyectos of proyectos">
                     <td><h3>{{Proyectos.nombreP}}</h3></td>
                     <td>{{Proyectos.descripcionP}}</td>
+                    <td>{{Proyectos.url}}</td>
+                    <td>{{Proyectos.year}}</td>
                     <td *ngIf="isLogged">
                         <button class="btn btn-outline-primary" routerLink="/editproyectos/{{Proyectos.id}}"> 
                             <i class="bi bi-pencil-fill"></i>EDITAR</button>
